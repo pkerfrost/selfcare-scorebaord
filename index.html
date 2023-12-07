@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Selfcare Scoreboard</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Adventure Scoreboard</title>
+</head>
+<body>
+    <div class="scoreboard">
+        <h1>Adventure Scoreboard</h1>
+        <div class="team">
+            <h2>Adventurer's Log</h2>
+            <button onclick="addPoints('meditation', 5)">Meditation</button>
+            <button onclick="addPoints('workout', 10)">Workout + Running</button>
+            <button onclick="addPoints('yoga', 5)">Yoga</button>
+            <button onclick="addPoints('art', 5)">Making Art</button>
+            <button onclick="addPoints('review', 10)">Write a Movie Review</button>
+            <button onclick="addPoints('post', 5)">Positive Facebook Post</button>
+            <button onclick="addPoints('prose', 5)">Writing Prose</button>
+            <button onclick="addPoints('university', 1)">Open University</button>
+            <button onclick="addPoints('housework', 1)">Housework</button>
+            <div class="rewards">
+                <h3>Rewards</h3>
+                <button onclick="deductPoints('social', 3)">Instagram/Facebook/Messages</button>
+                <button onclick="deductPoints('tvshow', 0.5)">TV Show</button>
+                <button onclick="deductPoints('movie', 0.2)">Movie</button>
+                <button onclick="deductPoints('wank', 30)">Wank</button>
+                <button onclick="deductPoints('game', 0.5)">Game</button>
+            </div>
+            <div class="breakdown" id="adventurerBreakdown"></div>
+            <button onclick="undoLastAction()">Undo Last Action</button>
+            <div class="graph" id="barGraph"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
