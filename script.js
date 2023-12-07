@@ -30,6 +30,35 @@ function addPoints(activity, basePoints) {
     updateLocalStorage();
 }
 
+// ... existing code ...
+
+function addPoints(activity, basePoints) {
+    // ... existing code ...
+
+    totalPoints += additionalPoints;
+    const newEntry = { action: 'add', activity, points: additionalPoints, duration, timestamp: new Date() };
+    log.push(newEntry);
+
+    updateScoreboard();
+    updateLocalStorage();
+    showFireworks(); // New line to trigger fireworks animation
+}
+
+// ... existing code ...
+
+function showFireworks() {
+    const firework = document.createElement('div');
+    firework.className = 'firework';
+    document.body.appendChild(firework);
+
+    setTimeout(() => {
+        firework.remove();
+    }, 500);
+}
+
+// ... existing code ...
+
+
 function deductPoints(reward, basePoints) {
     const duration = parseFloat(prompt(`Enter the duration of ${reward} in minutes:`)) || 0;
     const deductionPoints = basePoints * duration;
